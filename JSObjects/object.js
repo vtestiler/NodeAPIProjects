@@ -23,6 +23,7 @@ function Car (make, model, year){
 let myCar = new Car('BMW', '328 Xi', 2010);
 let myOldCar = new Car ('Honda', 'Accord Ex', 1997);
 let myWifesCar = new Car ('Nissan', 'Murano SL', 2017);
-let myWifesOldCar = new Car ('Toyota', 'Highlander ES', 2003)
+let myWifesOldCar = new Car ('Toyota', 'Highlander ES', 2003);
+let myFriendsOldCar = new Car ('Toyota', 'Camry', 2001);
 
 console.log(myWifesOldCar.getFullCarName());
