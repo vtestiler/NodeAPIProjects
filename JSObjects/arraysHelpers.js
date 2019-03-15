@@ -25,3 +25,24 @@ console.log('FOR EACH Using Fat arrow ===============');
 array.forEach(value => console.log(value));
 
 console.log(' ================ \n');
+
+console.log('SUM and Average ======== \n');
+
+let grades = [99, 96, 92, 87, 74, 69];
+console.log('Grades Array:');
+console.log(grades);
+
+console.log(' ========================= \n');
+
+
+
+let sum = 0;
+grades.forEach(value => sum += value);
+
+console.log(`Sum = ${sum}. \n`);
+
+let average = sum / grades.length;
+
+console.log(`Average = ${average.toFixed(1)}. \n`);
+
+// toFixed(x) converts number to number with x decimal points.
