@@ -69,10 +69,14 @@ console.log('addOneMap array is:');
 console.log(addOneMap + '\n');
 
 let vehicles = [
-  {make: 'Honda', model: 'Accord Ex', year: '1997', is4WD: false},
-  {make: 'Toyota', model: 'Highlander', year: '2003', is4WD: true},
-  {make: 'BMW', model: '328 Xi', year: '2010', is4WD: true}
+  {id: 1, make: 'Honda', model: 'Accord Ex', year: '1997', is4WD: false},
+  {id: 2, make: 'Toyota', model: 'Highlander', year: '2003', is4WD: true},
+  {id: 3, make: 'BMW', model: '328 Xi', year: '2010', is4WD: true}
 ];
+
+let sportCarDriver = {
+  vehicleId: 3, name: 'Vlad'
+};
 
 let models = vehicles.map(car => car.model);
 let make = vehicles.map(vehicle => vehicle.make);
@@ -87,7 +91,39 @@ console.log(make + '\n');
 console.log('Year:');
 console.log(year + '\n');
 
-// Filter
+// Filter returns all elements matching criteria
 console.log('filteredViehicles array:')
 let filteredVehicles = vehicles.filter(vehicle => vehicle.is4WD == false);
 console.log(filteredVehicles);
+
+//Find returns only first element matching criteria
+
+console.log('Find section ============ \n ');
+
+let vehicle = vehicles.find(vehicle => vehicle.is4WD === true);
+
+console.log(vehicle);
+
+//Find sports car driver matching vehicle IDs
+
+let car = vehicles.find(vehicle => vehicle.id === sportCarDriver.vehicleId);
+console.log('Car is: ')
+console.log(car);
+
+// Every and Some, if every element matches condition it returnes true
+// if some elements match conditions it return true.
+
+let areAll4WD = vehicles.every(vehicle => vehicle.is4WD === true);
+console.log(`All vehicles 4 WD? ${areAll4WD} \n`);
+
+
+let areSome4WD = vehicles.some(vehicle => vehicle.is4WD === true);
+console.log(`Some vehicles 4 WD? ${areSome4WD} \n`);
+
+//Reduce - see https://www.w3schools.com/jsref/jsref_reduce.asp
+
+let numbers = [1,3,5,7,9];
+
+let sumOfNumbers = numbers.reduce((total, element) => total + element);
+
+console.log(`Total of numbers is: ${sumOfNumbers}`);
