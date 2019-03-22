@@ -42,4 +42,20 @@ function createCar (make, model, year){
 }
 let myCar = new createCar ('BMW', '328 Xi', 2010);
 let myWifesCar = new createCar ('Nissan', 'Murano SL', 2017);
-console.log(` My Car is ''${myCar.getFullCarName()}'' and my wife's car is "${myWifesCar.getFullCarName()}".`);
+console.log(` My Car is ''${myCar.getFullCarName()}'' and my wife's car is "${myWifesCar.getFullCarName()}". \n`);
+
+
+
+// Square brakets are used to compute property name and object's property
+// can be accessed by bracket notation when property name is a string with space.
+
+var suffix = 'name';
+
+var person = {
+  ['first ' + suffix]: 'Vladimir',
+  ['last ' + suffix]: 'Testiler',
+
+};
+
+
+console.log(`Person\'s name is ${person['first name']} ${person['last name']}. `);
